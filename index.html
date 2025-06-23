@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindJobs.com - Find Your Dream Job</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h1>FindJobs.com</h1>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#jobs">Jobs</a>
+            <a href="#bookmarks">Bookmarks</a>
+        </div>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Find Your Dream Job</h1>
+            <p>Discover thousands of job opportunities with top companies</p>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search jobs...">
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Listings Section -->
+    <section id="jobs" class="job-listings">
+        <div class="filters">
+            <select id="category-filter">
+                <option value="">All Categories</option>
+                <option value="technology">Technology</option>
+                <option value="marketing">Marketing</option>
+                <option value="design">Design</option>
+                <option value="sales">Sales</option>
+            </select>
+            <select id="location-filter">
+                <option value="">All Locations</option>
+                <option value="remote">Remote</option>
+                <option value="new-york">New York</option>
+                <option value="london">London</option>
+                <option value="tokyo">Tokyo</option>
+            </select>
+        </div>
+        <div class="jobs-grid" id="jobs-container">
+            <!-- Job cards will be dynamically added here -->
+        </div>
+    </section>
+
+    <!-- Job Application Modal -->
+    <div id="application-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Apply for <span id="job-title"></span></h2>
+            <form id="application-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="resume">Resume</label>
+                    <input type="file" id="resume" accept=".pdf,.doc,.docx" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Cover Letter</label>
+                    <textarea id="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bookmarks Section -->
+    <section id="bookmarks" class="bookmarks">
+        <h2>Your Bookmarked Jobs</h2>
+        <div class="jobs-grid" id="bookmarks-container">
+            <!-- Bookmarked jobs will be dynamically added here -->
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html> 
